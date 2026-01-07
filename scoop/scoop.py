@@ -189,7 +189,7 @@ def _single_tensor_scoop(params: List[Tensor],
         exp_avg.mul_(beta1).add_(grad, alpha=1 - beta1)
         step_size_neg = - lr 
         ratio = (exp_avg.abs() / (rho * bs * hess + 1e-15)).clamp(None,1)
-        eps = 0.1
+        eps = 1.0
         param.copy_(
             (
                 (

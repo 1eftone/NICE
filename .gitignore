@@ -4,3 +4,6 @@
 *.npy
 *.sh
 scoop_ches25/
+results*/
+*.md
+*.yaml
